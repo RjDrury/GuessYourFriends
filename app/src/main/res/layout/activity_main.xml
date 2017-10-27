@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rob.guessyourfriends.MainActivity">
+
+    <Button
+        android:id="@+id/beginTurnTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whoseTurn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Start Turn!"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bartImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/megImg"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/bart" />
+
+    <ImageView
+        android:id="@+id/homerImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="80dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/homer" />
+
+    <ImageView
+        android:id="@+id/megImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/homerImg"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:srcCompat="@drawable/meg" />
+
+    <ImageView
+        android:id="@+id/lisaImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/megText"
+        android:layout_alignStart="@+id/megText"
+        android:layout_alignTop="@+id/peterImg"
+        android:visibility="gone"
+        app:srcCompat="@drawable/lisa" />
+
+    <ImageView
+        android:id="@+id/yourCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/lisaImg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/lisaImg"
+        android:layout_marginBottom="29dp"
+        android:visibility="gone"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/stewieImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/bartText"
+        android:layout_alignStart="@+id/bartText"
+        android:layout_alignTop="@+id/lisaImg"
+        android:visibility="gone"
+        app:srcCompat="@drawable/stewie" />
+
+    <ImageView
+        android:id="@+id/peterImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/homerImg"
+        android:layout_alignStart="@+id/homerImg"
+        android:layout_below="@+id/homerImg"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/peter" />
+
+    <Button
+        android:id="@+id/Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/yourCard"
+        android:layout_alignLeft="@+id/peterImg"
+        android:layout_alignStart="@+id/peterImg"
+        android:text="Guess"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/EndTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/yourCard"
+        android:layout_alignEnd="@+id/stewieImg"
+        android:layout_alignRight="@+id/stewieImg"
+        android:text="End Turn"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/homerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/homerImg"
+        android:layout_alignLeft="@+id/homerImg"
+        android:layout_alignRight="@+id/homerImg"
+        android:layout_alignStart="@+id/homerImg"
+        android:layout_below="@+id/homerImg"
+        android:fontFamily="casual"
+        android:text="Homer"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/megText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/homerText"
+        android:layout_alignBottom="@+id/homerText"
+        android:layout_alignEnd="@+id/megImg"
+        android:layout_alignLeft="@+id/megImg"
+        android:layout_alignRight="@+id/megImg"
+        android:layout_alignStart="@+id/megImg"
+        android:fontFamily="casual"
+        android:text="Meg"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/bartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/bartImg"
+        android:layout_alignLeft="@+id/bartImg"
+        android:layout_alignRight="@+id/bartImg"
+        android:layout_alignStart="@+id/bartImg"
+        android:layout_below="@+id/bartImg"
+        android:fontFamily="casual"
+        android:text="Bart"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/peterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/peterImg"
+        android:layout_alignLeft="@+id/peterImg"
+        android:layout_alignRight="@+id/peterImg"
+        android:layout_alignStart="@+id/peterImg"
+        android:layout_below="@+id/peterImg"
+        android:fontFamily="casual"
+        android:text="Peter"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/lisaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lisaImg"
+        android:layout_alignLeft="@+id/lisaImg"
+        android:layout_alignRight="@+id/lisaImg"
+        android:layout_alignStart="@+id/lisaImg"
+        android:layout_below="@+id/lisaImg"
+        android:fontFamily="casual"
+        android:text="Lisa"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/stewieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/stewieImg"
+        android:layout_alignLeft="@+id/stewieImg"
+        android:layout_alignRight="@+id/stewieImg"
+        android:layout_alignStart="@+id/stewieImg"
+        android:layout_below="@+id/stewieImg"
+        android:fontFamily="casual"
+        android:text="Stewie"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/whoseTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/megImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:fontFamily="casual"
+        android:text="Player 1 or 2"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/BeginGame"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorAccent"
+        android:onClick="beginGame"
+        android:text="Begin"
+        android:textSize="24sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/playerOneIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yourCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:text="PLAYER ONE FOR YOUR EYES ONLY"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/continueOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerOneIntro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:onClick="displayColorOne"
+        android:text="Continue"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/yourColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Your Character  is...."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/playerOneCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/yourColor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/nextPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:onClick="introTwo"
+        android:text="Got it!"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/playerTwoIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nextPlayer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Player 2 For your eyes only"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/continueTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerTwoIntro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:onClick="displayColorTwo"
+        android:text="Continue"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/playerTwoCard"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/yourColor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:visibility="gone"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/startGuessing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerTwoCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:onClick="transition"
+        android:text="Start!"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/beginTurnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whoseTurn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:onClick="turnOne"
+        android:text="Start Turn!"
+        android:visibility="gone" />
+
+</RelativeLayout>
